@@ -25,7 +25,8 @@ The cam folders containg the following:
 The `NNModel` folder contains the following:
 - class_dict.csv  = A dictionary telling the neural network which rgb value to use for which label.
 - checkpoint = Checkpoint infor used by tensorflow
-- latest_model.ckpt = The actual model weights
+
+The model weights will be automtically downloaded from my Google Drive. This code can be checked in ```utils.py -> download_model_weights()```
 
 **Run example**
 

@@ -1,4 +1,5 @@
-*__pycache__/*
+**/__pycache__
+__pycache__/*
 Data/RESULTS/*
 trans_color2world*
 trans_world2color*

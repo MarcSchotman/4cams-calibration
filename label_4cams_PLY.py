@@ -1,10 +1,3 @@
-import pyrealsense2 as rs
-import cv2 as cv
-import numpy as np
-import os, csv, sys
-# from matplotlib import pyplot as plt
-from plyfile import PlyData
-
 from utils import *
 from network_helpers.predict import *
 from visualize_4cams_PLY import get_PLY

@@ -1,7 +1,5 @@
 import numpy as np 
-import pyrealsense2 as rs
-import re, csv, os
-from plyfile import PlyData
+import csv, os
 import cv2 as cv
 import time
 import pptk
@@ -236,27 +234,6 @@ def load_PLY(path_ply):
 
         if points.shape[1] == 3:
             points = points.T
-        X = points[0,:]
-        Y = points[1,:]
-        Z = points[2,:]
-
-    elif path_ply.endswith(".ply"):
-        plydata = PlyData.read(path_ply)
-
-        X = plydata['vertex']['x'] # X is a memmap : a memory-map to an array stored in a binary file on disk.
-        Y = plydata['vertex']['y']
-        Z = plydata['vertex']['z']
-
-        X_temp = np.memmap.tolist(X) 
-        Y_temp = np.memmap.tolist(Y)
-        Z_temp = np.memmap.tolist(Z)
-
-        #Now remove outliers ( + 3*std) and save as npy
-        save_name = path_ply[:-4] + '.npy'
-
-        points = remove_outliers(np.array([X_temp, Y_temp, Z_temp]))
-        np.save(save_name, points)
-
         X = points[0,:]
         Y = points[1,:]
         Z = points[2,:]

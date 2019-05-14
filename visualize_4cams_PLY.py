@@ -1,11 +1,5 @@
-import pyrealsense2 as rs
-import cv2 as cv
-import numpy as np
-import os, csv, sys
-from plyfile import PlyData
-from run_icp import *
 from utils import *
-
+from run_icp import *
 
 def get_PLY(ply_path, calibration_folder):
 

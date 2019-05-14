@@ -25,7 +25,8 @@ The cam folders containg the following:
 The `NNModel` folder contains the following:
 - class_dict.csv  = A dictionary telling the neural network which rgb value to use for which label.
 - checkpoint = Checkpoint infor used by tensorflow
-- latest_model.ckpt = The actual model weights
+
+The model weights will be automtically downloaded from my Google Drive. This code can be checked in ```utils.py -> download_model_weights()```
 
 **Run example**
 
@@ -36,3 +37,11 @@ The `NNModel` folder contains the following:
 
 2) Run ```python visualize_4cams_PLY.py``` or ```python label_4cams_PLY.py``` to visualize the pointclouds with or without predicted labels from the network, respectively. The setup of both scripts are similar. At the top of ```"__main__"``` one can change some parameters indicating wheter to save the output/use_icp/paths_to_pointclouds.
 
+**Requirements**
+```
+- tensorflow-gpu 1.12
+- pptk
+- opencv
+- scikit-learn
+- Pillow
+```

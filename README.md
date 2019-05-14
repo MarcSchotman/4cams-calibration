@@ -37,3 +37,10 @@ The model weights will be automtically downloaded from my Google Drive. This cod
 
 2) Run ```python visualize_4cams_PLY.py``` or ```python label_4cams_PLY.py``` to visualize the pointclouds with or without predicted labels from the network, respectively. The setup of both scripts are similar. At the top of ```"__main__"``` one can change some parameters indicating wheter to save the output/use_icp/paths_to_pointclouds.
 
+**Requirements**
+```
+- tensorflow-gpu 1.12
+- pptk
+- opencv
+- scikit-learn
+- Pillow

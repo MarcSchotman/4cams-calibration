@@ -44,3 +44,4 @@ The model weights will be automtically downloaded from my Google Drive. This cod
 - opencv
 - scikit-learn
 - Pillow
+```
